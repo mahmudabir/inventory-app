@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-price-display',
-  templateUrl: './price-display.component.html',
-  styleUrls: ['./price-display.component.css']
+  template: ``,
 })
 export class PriceDisplayComponent implements OnInit {
 
