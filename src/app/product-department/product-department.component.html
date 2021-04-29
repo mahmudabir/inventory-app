@@ -1,1 +1,10 @@
-<p>product-department works!</p>
+<div class="product-department">
+  <span *ngFor="let name of product?.department; let i=index">
+    <a href="#">{{ name }}</a>
+
+    <div *ngIf="i < getDepartmentLength(product?.department);then isGreater else notGreater"></div>
+    <ng-template #isGreater> > </ng-template>
+    <ng-template #notGreater> </ng-template>
+
+  </span>
+</div>

@@ -1,12 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Product} from '../product.model';
 
 @Component({
-  selector: 'app-product-department',
+  selector: 'product-department',
   templateUrl: './product-department.component.html',
 })
 export class ProductDepartmentComponent implements OnInit {
+  @Input() product?: Product;
 
-  constructor() { }
+  constructor() {
+  }
+
+  // tslint:disable-next-line:typedef
+  getDepartmentLength(departments: string[] = []): number {
+    return departments.length - 1;
+  }
 
   ngOnInit(): void {
   }
